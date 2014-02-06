@@ -6,6 +6,8 @@
 <body>
 <?php require_once('server/db.php'); ?>
 
+<a href="server/login.php">Login/Register</a>
+
 <h1>Malicious Code in Websites: Fun with SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF)</h1>
 <h4>Boyang Zhu and Teja Ravipati</h4>
 <h4>Current Version: February 5th, 2014</h4>
