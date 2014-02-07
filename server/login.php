@@ -1,4 +1,5 @@
-</head>
+<!DOCTYPE html>
+<html>
 <body>
 
 <h4>Login</h4>
@@ -9,7 +10,7 @@
 </form>
 
 <?php
-if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
+if (isset($_POST['login_username']) && isset($_POST['login_password'])) {
     $username=$_POST['login_username'];
     $password=$_POST['login_password'];
 
@@ -41,7 +42,7 @@ if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
 </form>
 
 <?php
-if (isset($_POST["register_username"]) && isset($_POST["register_password"])) {
+if (isset($_POST['register_username']) && isset($_POST['register_password'])) {
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $email=$_POST['email'];
