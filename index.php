@@ -4,10 +4,10 @@
     <title>WebHax</title>
 </head>
 <body>
-<?php require_once('server/db.php'); ?>
-
 <a href="server/login.php">Login/Register</a>
 
+<h1>MyMaliciousSpace</h1>
+<!--
 <h1>Malicious Code in Websites: Fun with SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF)</h1>
 <h4>Boyang Zhu and Teja Ravipati</h4>
 <h4>Current Version: February 5th, 2014</h4>
@@ -16,13 +16,12 @@
     Reset Database <input type="submit"> <br>
 </form>
 <br>
+-->
 
-<form action="index.php" method="post">
-    <input type="text" name="val"><br>
+<form action="server/profile.php" method="get">
+    Search Username: <input type="text" name="username"><br>
     <input type="submit">
 </form>
-
-<?php if (isset($_POST["val"])) echo ($_POST["val"]) ?>
 
 </body>
 </html>
