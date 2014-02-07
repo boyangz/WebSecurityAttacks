@@ -2,13 +2,14 @@
 if (isset($_GET["username"])) {
     $username=$_GET['username'];
 
-    require_once('db.php');
+    include "db.php";
     $sql="SELECT * FROM users WHERE username='$username'";
-    $result=mysql_query($sql);
+    mysqli_multi_query($link, $sql);
+    $result=mysqli_store_result($link);
 
-    $count=mysql_num_rows($result);
+    $count=mysqli_num_rows($result);
     if($count==1){
-        $row = mysql_fetch_assoc($result);
+        $row = mysqli_fetch_assoc($result);
         echo "<h2>";
         echo $row['fname'];
         echo " ";
