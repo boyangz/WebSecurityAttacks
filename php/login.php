@@ -14,7 +14,7 @@ if (isset($_POST['login_username']) && isset($_POST['login_password'])) {
     $username=$_POST['login_username'];
     $password=$_POST['login_password'];
 
-    include "db.php";
+    include "../server/db.php";
     $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
     mysqli_multi_query($link, $sql);
     $result=mysqli_store_result($link);
@@ -49,7 +49,7 @@ if (isset($_POST['register_username']) && isset($_POST['register_password'])) {
     $username=$_POST['register_username'];
     $password=$_POST['register_password'];
 
-    include "db.php";
+    include "../server/db.php";
     $insert_query = "INSERT INTO users (fname, lname, email, username, password) VALUES ('$fname', '$lname', '$email', '$username', '$password')";
     mysqli_multi_query($link, $insert_query);
 

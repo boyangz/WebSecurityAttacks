@@ -2,7 +2,7 @@
 if (isset($_GET["username"])) {
     $username=$_GET['username'];
 
-    include "db.php";
+    include "../server/db.php";
     $sql="SELECT * FROM users WHERE username='$username'";
     mysqli_multi_query($link, $sql);
     $result=mysqli_store_result($link);
@@ -13,7 +13,7 @@ if (isset($_GET["username"])) {
         if (isset($_SESSION['username']) && $username = $_SESSION['username']) {
             echo $_SESSION['username'];
             echo " <a href=\"edit.php\">Edit</a>";
-            echo " <a href=\"logout.php\">Logout</a>";
+            echo " <a href=\"../server/logout.php\">Logout</a>";
         }
 
         $row = mysqli_fetch_assoc($result);
