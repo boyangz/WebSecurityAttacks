@@ -2,6 +2,30 @@
 <html>
 <body>
 
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+
+<?php
+include "../server/db.php";
+$sql = "SELECT * FROM users";
+$result = mysqli_query($link, $sql);
+
+while ($row = mysqli_fetch_assoc($result)) {?>
+    <tr>
+        <td><?php echo($row['fname']);?></td>
+        <td><?php echo($row['lname']);?></td>
+        <td><?php echo($row['username']);?></td>
+        <td><?php echo($row['password']);?></td>
+    </tr>
+<?}?>
+</table>
+
+
 <h4>Login</h4>
 <form method="post">
     Username: <input type="text" name="login_username"><br>
@@ -14,7 +38,6 @@ if (isset($_POST['login_username']) && isset($_POST['login_password'])) {
     $username=$_POST['login_username'];
     $password=$_POST['login_password'];
 
-    include "db.php";
     $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
     mysqli_multi_query($link, $sql);
     $result=mysqli_store_result($link);

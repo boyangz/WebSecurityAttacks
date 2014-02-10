@@ -24,5 +24,10 @@
     <input type="submit">
 </form>
 
+<div>
+    <h2>Static XSS Injection</h2>
+    <xmp><img src="http://static.fjcdn.com/gifs/Very+doge.+amaze_744518_4869842.gif"></img></xmp>
+</div>
+
 </body>
 </html>
