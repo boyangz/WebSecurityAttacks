@@ -1,4 +1,15 @@
 <?php
+session_start();
+if (isset($_SESSION['username'])) {
+    echo $_SESSION['username'];
+    echo " <a href=\"profile.php?username=";
+    echo $_SESSION['username'];
+    echo "\">Profile</a>";
+    echo " <a href=\"edit.php\">Edit</a>";
+    echo " <a href=\"../server/logout.php\">Logout</a> <br>";
+}
+echo " <a href=\"../index.php\">Home</a> <br>";
+
 if (isset($_GET["username"])) {
     $username=$_GET['username'];
 
@@ -9,13 +20,6 @@ if (isset($_GET["username"])) {
 
     $count=mysqli_num_rows($result);
     if($count==1){
-        session_start();
-        if (isset($_SESSION['username']) && $username = $_SESSION['username']) {
-            echo $_SESSION['username'];
-            echo " <a href=\"edit.php\">Edit</a>";
-            echo " <a href=\"../server/logout.php\">Logout</a>";
-        }
-
         $row = mysqli_fetch_assoc($result);
         echo "<h2>";
         echo $row['fname'];

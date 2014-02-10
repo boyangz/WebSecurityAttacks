@@ -10,21 +10,26 @@
         <th>Password</th>
     </tr>
 
-<?php
-include "../server/db.php";
-$sql = "SELECT * FROM users";
-$result = mysqli_query($link, $sql);
+    <?php
+    include "../server/db.php";
 
-while ($row = mysqli_fetch_assoc($result)) {?>
-    <tr>
-        <td><?php echo($row['fname']);?></td>
-        <td><?php echo($row['lname']);?></td>
-        <td><?php echo($row['username']);?></td>
-        <td><?php echo($row['password']);?></td>
-    </tr>
-<?}?>
+    $sql = "SELECT * FROM users";
+    $result = mysqli_query($link, $sql);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr> <td>";
+        echo $row['fname'];
+        echo "</td> <td>";
+        echo $row['lname'];
+        echo "</td> <td>";
+        echo $row['username'];
+        echo "</td> <td>";
+        echo $row['password'];
+        echo "</td> </tr>";
+    }
+    ?>
 </table>
-
+<br>
 
 <h4>Login</h4>
 <form method="post">
@@ -72,7 +77,6 @@ if (isset($_POST['register_username']) && isset($_POST['register_password'])) {
     $username=$_POST['register_username'];
     $password=$_POST['register_password'];
 
-    include "../server/db.php";
     $insert_query = "INSERT INTO users (fname, lname, email, username, password) VALUES ('$fname', '$lname', '$email', '$username', '$password')";
     mysqli_multi_query($link, $insert_query);
 
