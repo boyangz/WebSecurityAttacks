@@ -2,6 +2,7 @@
 <html>
 <body>
 
+<!--
 <table>
     <tr>
         <th>First Name</th>
@@ -10,7 +11,7 @@
         <th>Password</th>
     </tr>
 
-    <?php
+    <?php /*
     include "../server/db.php";
 
     $sql = "SELECT * FROM users";
@@ -26,10 +27,11 @@
         echo "</td> <td>";
         echo $row['password'];
         echo "</td> </tr>";
-    }
+    } */
     ?>
 </table>
 <br>
+-->
 
 <h4>Login</h4>
 <form method="post">

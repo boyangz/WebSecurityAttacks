@@ -20,17 +20,6 @@ else {
 ?>
 
 <h1>MyMaliciousSpace</h1>
-<!--
-<h1>Malicious Code in Websites: Fun with SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF)</h1>
-<h4>Boyang Zhu and Teja Ravipati</h4>
-<h4>Current Version: February 5th, 2014</h4>
-
-<form name="reset_db_form" action="server/reset_db.php" method="post">
-    Reset Database <input type="submit"> <br>
-</form>
-<br>
--->
-
 
 <form action="php/profile.php" method="get">
     Search Username: <input type="text" name="username"><br>
@@ -43,7 +32,6 @@ else {
         <th>First Name</th>
         <th>Last Name</th>
         <th>Username</th>
-        <th>Password</th>
     </tr>
 
     <?php
@@ -59,8 +47,6 @@ else {
         echo $row['lname'];
         echo "</td> <td>";
         echo $row['username'];
-        echo "</td> <td>";
-        echo $row['password'];
         echo "</td> </tr>";
     }
     ?>
