@@ -72,7 +72,7 @@ if (isset($_POST['register_username']) && isset($_POST['register_password'])) {
     $username=$_POST['register_username'];
     $password=$_POST['register_password'];
 
-    include "db.php";
+    include "../server/db.php";
     $insert_query = "INSERT INTO users (fname, lname, email, username, password) VALUES ('$fname', '$lname', '$email', '$username', '$password')";
     mysqli_multi_query($link, $insert_query);
 

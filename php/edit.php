@@ -26,21 +26,21 @@ if (isset($_SESSION['username'])) {
     if (isset($_POST['fname'])) {
         $fname=$_POST['fname'];
 
-        include "db.php";
+        include "../server/db.php";
         $sql="UPDATE users SET fname = '$fname' WHERE username='$username'";
         mysqli_multi_query($link, $sql);
     }
     if (isset($_POST['lname'])) {
         $lname=$_POST['lname'];
 
-        include "db.php";
+        include "../server/db.php";
         $sql="UPDATE users SET lname = '$lname' WHERE username='$username'";
         mysqli_multi_query($link, $sql);
     }
     if (isset($_POST['email'])) {
         $email=$_POST['email'];
 
-        include "db.php";
+        include "../server/db.php";
         $sql="UPDATE users SET email = '$email' WHERE username='$username'";
         mysqli_multi_query($link, $sql);
     }
