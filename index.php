@@ -4,7 +4,7 @@
     <title>WebHax</title>
 </head>
 <body>
-<a href="server/login.php">Login/Register</a>
+<a href="php/login.php">Login/Register</a>
 
 <h1>MyMaliciousSpace</h1>
 <!--
@@ -18,7 +18,8 @@
 <br>
 -->
 
-<form action="server/profile.php" method="get">
+
+<form action="php/profile.php" method="get">
     Search Username: <input type="text" name="username"><br>
     <input type="submit">
 </form>
