@@ -42,18 +42,21 @@ if (isset($_SESSION['username'])) {
 
         $sql="UPDATE users SET fname = '$fname' WHERE username='$username'";
         mysqli_multi_query($link, $sql);
+        echo "<script language='javascript'> history.go(-2); </script>;";
     }
     if (isset($_POST['lname'])) {
         $lname=$_POST['lname'];
 
         $sql="UPDATE users SET lname = '$lname' WHERE username='$username'";
         mysqli_multi_query($link, $sql);
+        echo "<script language='javascript'> history.go(-2); </script>;";
     }
     if (isset($_POST['email'])) {
         $email=$_POST['email'];
 
         $sql="UPDATE users SET email = '$email' WHERE username='$username'";
         mysqli_multi_query($link, $sql);
+        echo "<script language='javascript'> history.go(-2); </script>;";
     }
 }
 ?>
