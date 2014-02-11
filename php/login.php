@@ -41,6 +41,8 @@
 </form>
 
 <?php
+include "../server/db.php";
+
 if (isset($_POST['login_username']) && isset($_POST['login_password'])) {
     $username=$_POST['login_username'];
     $password=$_POST['login_password'];

